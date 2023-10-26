@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="rohan.test" template=
+            "Sigma_Blog::product/view/custom_tab.phtml">
+                <!-- <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Custom_Tab</argument>
+                </arguments> -->
+            </block>
+        </referenceBlock>
+
+        <referenceBlock name="product.info.addtocart">
+            <block class="Magento\Framework\View\Element\Template" name="product.info.custom_block" template=
+            "Sigma_Blog::product/view/custom_block.phtml">
+            </block>
+        </referenceBlock>
+    </body> 
+</page>
