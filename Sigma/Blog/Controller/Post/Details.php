@@ -2,25 +2,31 @@
 
 namespace Sigma\Blog\Controller\Post;
 
-use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\HttpGetActionInterface;
+use Magento\Framework\View\Result\Page;
+use Magento\Framework\View\Result\PageFactory;
 
 class Details implements HttpGetActionInterface
 {
 
     public function __construct(
-        private Session $session
+        private PageFactory $pageFactory
     ) {}
 
+/**
+ * PageFactory create method.
+ *
+ * @return mixed
+ */
     public function execute()
     {
-        echo '<pre>';
-        var_dump($this->session->getData());
-        die();
+        return $this->pageFactory->create();
     }
 }
 
-
+//echo '<pre>';
+//var_dump($this->session->getData());
+//die();
 //  //it is not good practice to create instance of a class using ObjectManager, it is just for knowledge
 //         $object = ObjectManager::getInstance();
 //         //getting data of current logged-in customer
