@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page layout="1column"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+            <block name="blog.post.list" template="Sigma_Blog::post/list.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="main.content">
+            <block name="blog.post.detail" template="Sigma_Blog::post/detail.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="sidebar.main">
+            <block name="blog.post.sidebar" template="Sigma_Blog::post/sidebar.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
