@@ -3,25 +3,23 @@
 namespace Sigma\Blog\Controller\Index;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\Controller\Result\RedirectFactory;
+use Magento\Framework\Controller\Result\Forward;
+use Magento\Framework\Controller\Result\ForwardFactory;
 
 class Index implements HttpGetActionInterface
 {
 
     public function __construct(
-        private RedirectFactory $redirectFactory
+        private ForwardFactory $forwardFactory,
     )
     {}
 
-    /**
-     * Execute action based on request and return result
-     *
-     * @return \Magento\Framework\Controller\ResultInterface|ResponseInterface
-     * @throws \Magento\Framework\Exception\NotFoundException
-     */
     public function execute()
     {
-        $redirect = $this->redirectFactory->create();
-        return $redirect->setPath('*/post/listaction');
+        /**
+         * @var Forward $forward
+         */
+        $forward = $this->forwardFactory->create();
+        return $forward->setController('post')->forward('listaction');
     }
 }
