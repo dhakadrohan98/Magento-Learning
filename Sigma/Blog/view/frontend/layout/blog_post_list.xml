@@ -4,9 +4,9 @@
     <body>
         <referenceContainer name="main">
             <block name="blog.post.list" template="Sigma_Blog::post/list.phtml"/>
-            <container htmlTag="h1" htmlId="blog-header">
+            <container htmlTag="h6" htmlId="blog-header">
                 <block name="blog.post.sidebar.extra" template="Sigma_Blog::post/sidebar.phtml"/>
-            </container>    
+            </container>
         </referenceContainer>
         <!--<referenceContainer name="main.content">-->
             <!--<block name="blog.post.detail" template="Sigma_Blog::post/detail.phtml"/>-->
