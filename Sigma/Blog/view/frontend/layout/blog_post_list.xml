@@ -3,13 +3,17 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main">
-            <block name="blog.post.list" template="Sigma_Blog::post/list.phtml"/>
+            <block name="blog.post.list" template="Sigma_Blog::post/list.phtml">
+                <arguments>
+                    <argument name="post_vm" xsi:type="object">Sigma\Blog\ViewModel\Post</argument>
+                </arguments>
+            </block>
             <container htmlTag="h6" htmlId="blog-header">
                 <block name="blog.post.sidebar.extra" template="Sigma_Blog::post/sidebar.phtml"/>
             </container>
         </referenceContainer>
         <!--<referenceContainer name="main.content">-->
-            <!--<block name="blog.post.detail" template="Sigma_Blog::post/detail.phtml"/>-->
+            <!--<block name="blog.post.detail" template="Sigma_Blog::post/details.phtml"/>-->
         <!--</referenceContainer>-->
         <referenceContainer name="sidebar.main">
             <block name="blog.post.sidebar" template="Sigma_Blog::post/sidebar.phtml"/>
