@@ -2,8 +2,6 @@
 
 namespace Sigma\Blog\Api\Data;
 
-use Symfony\Component\DependencyInjection\Exception\string;
-
 /**
  * Blog Post Interface
  * @api

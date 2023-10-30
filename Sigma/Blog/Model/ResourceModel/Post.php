@@ -14,8 +14,8 @@ class Post extends AbstractDb
      *
      * @return void
      */
-    protected function _construct() //not a standard php constructor like __construct()
+    protected function _construct() //not a standard php constructor
     {
-        $this->_init(self::MAIN_TABLE, self::ID_FILED_NAME);
+        $this->_init('sigma_blog_post','id');
     }
 }
