@@ -12,16 +12,22 @@
                 <block name="blog.post.sidebar.extra" template="Sigma_Blog::post/sidebar.phtml"/>
             </container>
         </referenceContainer>
-        <!--<referenceContainer name="main.content">-->
-            <!--<block name="blog.post.detail" template="Sigma_Blog::post/details.phtml"/>-->
-        <!--</referenceContainer>-->
-        <referenceContainer name="sidebar.main">
-            <block name="blog.post.sidebar" template="Sigma_Blog::post/sidebar.phtml"/>
+        <referenceContainer name="main.content">
+            <block name="blog.post.detail" template="Sigma_Blog::post/detail.phtml"/>
         </referenceContainer>
+
+        <!--<referenceContainer name="sidebar.main">-->
+            <!--<block name="blog.post.sidebar" template="Sigma_Blog::post/sidebar.phtml">-->
+                <!--<arguments>-->
+                    <!--<argument name="post_vm" xsi:type="object">Sigma\Blog\ViewModel\Post</argument>-->
+                <!--</arguments>-->
+            <!--</block>-->
+        <!--</referenceContainer>-->
+
         <!--<move element="wishlist_sidebar" destination="sidebar.additional" before="-"/>-->
 
         <!--<referenceBlock name="catalog.compare.sidebar" remove="true"/>-->
 
-        <referenceBlock name="wishlist_sidebar" template="Sigma_Blog::wishlist/sidebar.phtml"/>
+        <!--<referenceBlock name="wishlist_sidebar" template="Sigma_Blog::wishlist/sidebar.phtml"/>-->
     </body>
 </page>
