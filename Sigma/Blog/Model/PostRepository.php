@@ -16,6 +16,11 @@ class PostRepository implements PostRepositoryInterface
     )
     {}
 
+    /**
+     * @param int $id
+     * @return \Sigma\Blog\Api\Data\PostInterface
+     * @throws NoSuchEntityException
+     */
     public function getById($id)
     {
         $post = $this->postFactory->create();

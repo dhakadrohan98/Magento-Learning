@@ -16,8 +16,8 @@ class Post implements ArgumentInterface
      */
     public function __construct(
         private \Sigma\Blog\Model\ResourceModel\Post\Collection $collection,
-        private PostRepositoryInterface $postRepositoryInterface,
-        private RequestInterface $request
+        private \Sigma\Blog\Api\PostRepositoryInterface $postRepository,
+        private \Magento\Framework\App\RequestInterface $request
     ) {}
 
     /**
@@ -31,20 +31,17 @@ class Post implements ArgumentInterface
     /**
      * @return int
      */
-
-        public function getCount()
-      {
+    public function getCount()
+    {
         return $this->collection->count();
-      }
+    }
 
     /**
-     * @return \Sigma\Blog\Api\Data\PostInterface
+     * @return PostInterface
      */
     public function getDetail()
     {
         $id = (int) $this->request->getParam('id');
-        return $this->postRepository->getById('id');
+        return $this->postRepository->getById($id);
     }
-
-    
 }
