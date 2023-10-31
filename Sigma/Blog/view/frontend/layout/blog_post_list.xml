@@ -8,9 +8,9 @@
                     <argument name="post_vm" xsi:type="object">Sigma\Blog\ViewModel\Post</argument>
                 </arguments>
             </block>
-            <container htmlTag="h6" htmlId="blog-header">
-                <block name="blog.post.sidebar.extra" template="Sigma_Blog::post/sidebar.phtml"/>
-            </container>
+            <!--<container htmlTag="h6" htmlId="blog-header">-->
+                <!--<block name="blog.post.sidebar.extra" template="Sigma_Blog::post/sidebar.phtml"/>-->
+            <!--</container>-->
         </referenceContainer>
         <referenceContainer name="main.content">
             <block name="blog.post.detail" template="Sigma_Blog::post/detail.phtml"/>

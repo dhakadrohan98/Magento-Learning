@@ -1,15 +1,3 @@
-<?php
-/**
- * @var Magento\Framework\View\Element\Template $block
- * @var \Sigma\Blog\ViewModel\Post $postVm
- */
-
-$postVm = $block->getData('post_vm');
-$post = $postVm->getDetail();
-?>
-
 <div class="blog-post-detail">
-    <h1><?= $post->getTitle() ?></h1>
-    <P><em><?= __('Created at: %1', $post->getCreatedAt())  ?></em></P>
-    <P><?= $post->getContent() ?></P>
+    <p> <?= __('Blog Post Detail') ?></p>
 </div>
