@@ -12,9 +12,9 @@
                 <!--<block name="blog.post.sidebar.extra" template="Sigma_Blog::post/sidebar.phtml"/>-->
             <!--</container>-->
         </referenceContainer>
-        <referenceContainer name="main.content">
-            <block name="blog.post.detail" template="Sigma_Blog::post/detail.phtml"/>
-        </referenceContainer>
+        <!--<referenceContainer name="main.content">-->
+            <!--<block name="blog.post.detail" template="Sigma_Blog::post/detail.phtml"/>-->
+        <!--</referenceContainer>-->
 
         <!--<referenceContainer name="sidebar.main">-->
             <!--<block name="blog.post.sidebar" template="Sigma_Blog::post/sidebar.phtml">-->

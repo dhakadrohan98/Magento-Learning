@@ -6,8 +6,8 @@
 $postVm = $block->getData('post_vm');
 $post = $postVm->getDetail();
 ?>
-
 <div class="blog-post-detail">
-<h><?= $escaper->escapeHtml($post->getTile()) ?></h>
-<P><?= $escaper->escapeHtml($post->getContent(), ['em','p','strong']) ?></P>
+    <h><?= $escaper->escapeHtml($post->getTile()) ?></h>
+    <P><?= $escaper->escapeHtml($post->getContent(), ['em','p','strong']) ?></P>
 </div>
+

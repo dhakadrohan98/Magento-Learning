@@ -11,4 +11,9 @@
         <plugin name="sigma_blogextra_add_data_to_post_detail_observer"
                 type="Sigma\BlogExtra\Plugin\AddDataToPostDetailObserver" />
     </type>
+
+    <type name="Sigma\Blog\Controller\Post\Detail">
+        <plugin name="sigma_blogextra_alternate_post_detail_template"
+                type="Sigma\BlogExtra\Plugin\AlternatePostDetailTemplate" />
+    </type>
 </config>
