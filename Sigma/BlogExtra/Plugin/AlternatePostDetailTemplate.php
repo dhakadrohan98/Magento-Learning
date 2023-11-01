@@ -21,7 +21,6 @@ class AlternatePostDetailTemplate
                 ->getBlock('blog.post.detail')
                 ->setTemplate('Sigma_BlogExtra::post/detail.phtml');
         }
-
         return $result;
     }
 }
