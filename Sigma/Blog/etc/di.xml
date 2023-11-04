@@ -3,4 +3,6 @@
 
     <preference for="Sigma\Blog\Api\Data\PostInterface" type="Sigma\Blog\Model\Post"/>
     <preference for="Sigma\Blog\Api\PostRepositoryInterface" type="Sigma\Blog\Model\PostRepository"/>
+
+    <preference for="Magento\Contact\ViewModel\UserDataProvider" type="Sigma\Blog\ViewModel\UserDataProvider"/>
 </config>
