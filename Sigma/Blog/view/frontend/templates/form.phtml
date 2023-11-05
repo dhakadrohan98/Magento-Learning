@@ -49,7 +49,7 @@ $viewModel = $block->getViewModel();
                 />
             </div>
         </div>
-        <!-- Custom field -->
+        <!-- Custom fields -->
         <div class="field subject required">
             <label class="label" for="subject"><span><?= $block->escapeHtml(__('Subject')) ?></span></label>
             <div class="control">
@@ -62,7 +62,19 @@ $viewModel = $block->getViewModel();
                        data-validate="{required:true}"/>
             </div>
         </div>
-        <!-- Custom field -->
+        <div class="field detailed description required">
+            <label class="label" for="detailed_description"><span><?= $block->escapeHtml(__('Detailed Description')) ?></span></label>
+            <div class="control">
+                <input name="detailed_description"
+                       id="detailed_description"
+                       title="<?= $block->escapeHtml(__('Detailed Description')) ?>"
+                       value="<?= $block->escapeHtmlAttr($viewModel->getUserDetailedDescription()) ?>"
+                       class="input-text"
+                       type="text"
+                       data-validate="{required:true}"/>
+            </div>
+        </div>
+        <!-- Custom fields -->
         <div class="field telephone">
             <label class="label" for="telephone"><span><?= $block->escapeHtml(__('Phone Number')) ?></span></label>
             <div class="control">
