@@ -59,6 +59,18 @@ class UserDataProvider implements ArgumentInterface
     {
         return $this->helper->getPostValue('subject');
     }
+
+
+    /**
+     * Get user Detailed Description (custom method)
+     *
+     * @return string
+     */
+    public function getUserDetailedDescription()
+    {
+        return $this->helper->getPostValue('detailed_description');
+    }
+
     /**
      * Get user telephone
      *
