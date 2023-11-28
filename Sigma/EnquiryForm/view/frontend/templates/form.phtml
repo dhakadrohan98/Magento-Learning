@@ -1,0 +1,15 @@
+<form action="<?php echo $block->getUrl('enquiry/form/detail') ?>" method="post">
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description" required>
+
+    <label for="phone_number">Phone Number</label>
+    <input type="number" name="phone_number" id="phone_number" required>
+
+    <button type="submit">Submit</button>
+</form>
