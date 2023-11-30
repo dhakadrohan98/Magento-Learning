@@ -14,7 +14,7 @@ use Magento\Framework\View\Result\Page;
 use Magento\Framework\View\Result\PageFactory;
 
 /**
- * Class Index
+ * Class Grid
  */
 class Index extends Action implements HttpGetActionInterface
 {
