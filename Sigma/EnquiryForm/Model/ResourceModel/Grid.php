@@ -3,7 +3,9 @@
 namespace Sigma\EnquiryForm\Model\ResourceModel;
 
 /**
- * Grid Grid mysql resource.
+    - Manages the database interactions for a model.
+    - Contains CRUD (Create, Read, Update, Delete) operations.
+    - Maps the model to the corresponding database table.
  */
 class Grid extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {

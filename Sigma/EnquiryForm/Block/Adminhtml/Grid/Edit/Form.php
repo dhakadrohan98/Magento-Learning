@@ -17,17 +17,14 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
      * @param \Magento\Framework\Registry $registry,
      * @param \Magento\Framework\Data\FormFactory $formFactory,
      * @param \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig,
-     * @param \Sigma\EnquiryForm\Model\Status $options,
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Data\FormFactory $formFactory,
         \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig,
-        \Sigma\EnquiryForm\Model\Status $options,
         array $data = []
     ) {
-        $this->_options = $options;
         $this->_wysiwygConfig = $wysiwygConfig;
         parent::__construct($context, $registry, $formFactory, $data);
     }
@@ -118,19 +115,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
             ]
         );
 
-        $fieldset->addField(
-            'is_active',
-            'select',
-            [
-                'name' => 'is_active',
-                'label' => __('Status'),
-                'id' => 'is_active',
-                'title' => __('Status'),
-                'values' => $this->_options->getOptionArray(),
-                'class' => 'status',
-                'required' => true,
-            ]
-        );
         $form->setValues($model->getData());
         $form->setUseContainer(true);
         $this->setForm($form);
