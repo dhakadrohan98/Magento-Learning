@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sigma_EnquiryForm::sigma_group" title="Sigma Group" module="Sigma_EnquiryForm" sortOrder="10" resource="Sigma_EnquiryForm::sigma_group" />
+        <add id="Sigma_EnquiryForm::sigma_enquiry_form" title="Enquiry Form" module="Sigma_EnquiryForm" sortOrder="20" parent="Sigma_EnquiryForm::sigma_group" action="enquiryform/grid/index" resource="Sigma_EnquiryForm::sigma_enquiry_form"/>
+    </menu>
+</config>

@@ -12,7 +12,7 @@ class Index implements HttpGetActionInterface
 }
 
 // Another way for creating empty page on front store
-// class Index extends \Magento\Framework\App\Action\Action
+// class Grid extends \Magento\Framework\App\Action\Action
 // {
 // 	protected $_pageFactory;
 
