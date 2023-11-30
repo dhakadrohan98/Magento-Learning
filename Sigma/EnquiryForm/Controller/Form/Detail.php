@@ -6,7 +6,6 @@ use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Sigma\EnquiryForm\Model\GridFactory;
-use Sigma\EnquiryForm\Model\ResourceModel\Grid as GridResourceModel;
 use Magento\Framework\Message\ManagerInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Mail\Template\TransportBuilder;
@@ -15,38 +14,39 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\ObjectManager;
 use Magento\Framework\App\Area;
 use Magento\Store\Model\StoreManagerInterface;
+use Sigma\Email\Model\Config;
 
 class Detail extends Action
 {
     protected $resultPageFactory;
     protected $gridFactory;
-    protected $gridResourceModel;
     protected $messageManager;
     protected $transportBuilder;
     protected $inlineTranslation;
     private $scopeConfig;
     protected $storeManager;
+    protected $config;
 
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
         GridFactory $gridFactory,
-        GridResourceModel $gridResourceModel,
         ManagerInterface $messageManager,
         TransportBuilder $transportBuilder,
         StateInterface $inlineTranslation,
         ScopeConfigInterface $scopeConfig,
-        StoreManagerInterface $storeManager
+        StoreManagerInterface $storeManager,
+        \Sigma\Email\Model\Config $config
 
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->gridFactory = $gridFactory;
-        $this->gridResourceModel = $gridResourceModel;
         $this->messageManager = $messageManager;
         $this->transportBuilder = $transportBuilder;
         $this->inlineTranslation = $inlineTranslation;
         $this->scopeConfig = $scopeConfig;
         $this->storeManager = $storeManager;
+        $this->config = $config;
         parent::__construct($context);
     }
 
@@ -54,7 +54,7 @@ class Detail extends Action
     {
         if($this->getRequest()->getPostValue()) {
             try {
-                $data = $this->getRequest()->getPostValue();
+                $data = $this->getFormData();
                 $enquiryModel = $this->gridFactory->create();
                 foreach ($data as $key => $value) {
                     //echo $key."=>".$value;
@@ -81,15 +81,22 @@ class Detail extends Action
     public function sendEmailToAdmin($data)
     {
         $storeId = $this->storeManager->getStore()->getId();
+        $data = $this->getFormData();
+        foreach ($data as $key => $value) {
+            if($key == 'email')
+                $email = $value;
+        }
+
+//        $customEmailAddress = $this->config->getCustomEmailAddress();
 
         // Set sender information
         $sender = [
-            'name' => 'Rohan Dhakad',
+            'name' => 'System Admin',
             'email' => 'rohan.dhakad@sigmainfo.net',
         ];
 
         // Set recipient information
-        $recipientEmail = 'rohan.dhakad+1@sigmainfo.net';
+        $recipientEmail = $email;
         $recipientName = 'Rohan Dhakad';
 
         // Load email template
@@ -117,6 +124,10 @@ class Detail extends Action
 
         // End inline translation
         $this->inlineTranslation->resume();
+    }
+
+    public function getFormData() {
+        return $this->getRequest()->getPostValue();
     }
 
 }

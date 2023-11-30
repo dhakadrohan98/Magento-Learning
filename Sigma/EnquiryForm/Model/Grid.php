@@ -4,6 +4,9 @@ namespace Sigma\EnquiryForm\Model;
 
 use Sigma\EnquiryForm\Api\Data\GridInterface;
 
+//Represents a single entity or business object.
+//Contains business logic and data related to a specific entity.
+
 class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterface
 {
     /**
@@ -46,7 +49,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setId($id)
     {
-        return $this->setData(self::ID, $id);
+        return $this->setData(self::ID, $id); //setData method required arguments in key-value form
     }
 
     /**
