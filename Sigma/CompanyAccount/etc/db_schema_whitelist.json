@@ -1,0 +1,27 @@
+{
+    "aw_ca_company": {
+        "column": {
+            "business_structure": true,
+            "abn": true,
+            "acn": true,
+            "business_phone_number": true,
+            "billing_address": true,
+            "billing_state": true,
+            "billing_postcode": true,
+            "delivery_address": true,
+            "delivery_state": true,
+            "delivery_postcode": true,
+            "credit_limit": true,
+            "no_of_pest_technicians": true,
+            "pest_management_services": true,
+            "ref_name": true,
+            "ref_address": true,
+            "ref_email": true,
+            "ref_phone": true,
+            "trade_ref_name": true,
+            "trade_ref_address": true,
+            "trade_ref_email": true,
+            "trade_ref_phone": true
+        }
+    }
+}

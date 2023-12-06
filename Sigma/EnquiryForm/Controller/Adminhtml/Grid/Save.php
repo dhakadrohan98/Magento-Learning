@@ -29,7 +29,7 @@ class Save extends \Magento\Backend\App\Action
     {
         $data = $this->getRequest()->getPostValue();
         if (!$data) {
-            $this->_redirect('enquiryform/grid/addrow');
+            $this->_redirect('enquiryform/grid/index');
             return;
         }
         try {

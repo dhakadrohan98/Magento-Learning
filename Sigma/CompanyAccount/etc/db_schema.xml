@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="aw_ca_company" resource="default" engine="innodb" comment="AW Company Table">
+        <column xsi:type="varchar" name="business_structure" nullable="true" length="255" comment="Business Structure"/>
+        <column xsi:type="varchar" name="abn" nullable="true" length="110" comment="ABN"/>
+        <column xsi:type="varchar" name="acn" nullable="true" length="110" comment="ACN"/>
+        <column xsi:type="varchar" name="business_phone_number" nullable="true" length="20" comment="Business Phone Number"/>
+        <column xsi:type="varchar" name="billing_address" nullable="true" comment="Billing Address"/>
+        <column xsi:type="varchar" name="billing_state" nullable="true" length="50" comment="Billing State"/>
+        <column xsi:type="varchar" name="billing_postcode" nullable="true" length="50" comment="Billing Postcode"/>
+        <column xsi:type="varchar" name="delivery_address" nullable="true" comment="Delivery Address"/>
+        <column xsi:type="varchar" name="delivery_state" nullable="true" length="50" comment="Delivery State"/>
+        <column xsi:type="varchar" name="delivery_postcode" nullable="true" length="50" comment="Delivery Postcode"/>
+        <column xsi:type="varchar" name="credit_limit" nullable="true" length="20" comment="Credit Limit"/>
+        <column xsi:type="varchar" name="no_of_pest_technicians" nullable="true" length="20" comment="No Of Pest Technicians"/>
+        <column xsi:type="varchar" name="pest_management_services" nullable="true" length="20" comment="Pest Management Services"/>
+        <column xsi:type="varchar" name="ref_name" nullable="true" length="255" comment="Reference Name"/>
+        <column xsi:type="varchar" name="ref_address" nullable="true" length="255" comment="Reference Address"/>
+        <column xsi:type="varchar" name="ref_email" nullable="true" length="255" comment="Reference Email"/>
+        <column xsi:type="varchar" name="ref_phone" nullable="true" length="20" comment="Reference Phone"/>
+        <column xsi:type="varchar" name="trade_ref_name" nullable="true" length="255" comment="Trade Reference Name"/>
+        <column xsi:type="varchar" name="trade_ref_address" nullable="true" length="255" comment="Trade Reference Address"/>
+        <column xsi:type="varchar" name="trade_ref_email" nullable="true" length="255" comment="Trade Reference Email"/>
+        <column xsi:type="varchar" name="trade_ref_phone" nullable="true" length="20" comment="Trade Reference Phone"/>
+    </table>
+</schema>
