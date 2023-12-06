@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Aheadworks\Ca\Api\Data\CompanyInterface" type="Sigma\CompanyAccount\Model\CompanyAccount"/>
+    <!--<preference for="Aheadworks\Ca\Model\Company" type="Sigma\CompanyAccount\Model\CompanyAccount" />-->
+    <!--<preference for="Sigma\CompanyAccount\Api\Data\CompanyAccountInterface" type="Sigma\CompanyAccount\Model\CompanyAccount" />-->
+</config>

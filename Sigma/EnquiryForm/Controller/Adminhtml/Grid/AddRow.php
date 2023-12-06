@@ -46,7 +46,7 @@ class AddRow extends \Magento\Backend\App\Action
             $rowTitle = $rowData->getTitle();
             if (!$rowData->getId()) {
                 $this->messageManager->addError(__('row data no longer exist.'));
-                $this->_redirect('enquiryform/grid/rowdata');
+                $this->_redirect('enquiryform/grid/index');
                 return;
             }
         }

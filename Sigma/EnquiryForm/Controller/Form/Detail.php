@@ -91,7 +91,7 @@ class Detail extends Action
 
         // Set sender information
         $sender = [
-            'name' => 'System Admin',
+            'name' => 'System Admin', //
             'email' => 'rohan.dhakad@sigmainfo.net',
         ];
 
